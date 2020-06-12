@@ -1,5 +1,5 @@
 // Which React object should be bound to which classes for elements
-type WidgetClassBinding = {
+export type WidgetClassBinding = {
   class: string;
   component: object;
 };
