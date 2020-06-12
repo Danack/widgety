@@ -57,9 +57,4 @@ const initByClass = (widgetBindings: WidgetClassBinding[], h: any, render: any) 
     setupWidget(widgetBinding, h, render);
   }
 };
-
-// export = initByClass;
-
-module.exports = {
-  initByClass
-};
+export default initByClass;
