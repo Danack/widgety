@@ -61,5 +61,5 @@ const initByClass = (widgetBindings: WidgetClassBinding[], h: any, render: any) 
 // export = initByClass;
 
 module.exports = {
-  initByClass: initByClass
-}
+  initByClass
+};
