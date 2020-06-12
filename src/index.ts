@@ -1,5 +1,5 @@
 // Which React object should be bound to which classes for elements
-export type WidgetClassBinding = {
+type WidgetClassBinding = {
   class: string;
   component: object;
 };
@@ -52,12 +52,14 @@ const setupWidget = (widgetBindings: WidgetClassBinding, h: any, render: any) =>
   }
 };
 
-const setupWidgetsByClass = (widgetBindings: WidgetClassBinding[], h: any, render: any) => {
+const initByClass = (widgetBindings: WidgetClassBinding[], h: any, render: any) => {
   for (const widgetBinding of widgetBindings) {
     setupWidget(widgetBinding, h, render);
   }
 };
 
+// export = initByClass;
+
 module.exports = {
-  initByClass: setupWidgetsByClass,
-};
+  initByClass: initByClass
+}
