@@ -1,0 +1,45 @@
+{
+  "author": "Danack",
+  "bugs": {
+    "url": "https://github.com/Danack/widgety/issues"
+  },
+  "description": "Widget based (p)react.",
+  "devDependencies": {
+    "@types/jest": "^26.0.0",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.5"
+  },
+  "files": [
+    "src/**/*"
+  ],
+  "homepage": "https://github.com/Danack/widgety#readme",
+  "keywords": [
+    "widget",
+    "react",
+    "preact"
+  ],
+  "license": "MIT",
+  "main": "src/index.ts",
+  "name": "widgety",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danack/widgety.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "postversion": "git push && git push --tags",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "jest --config jestconfig.json && npm run lint",
+    "test": "jest --config=jestconfig.json",
+    "version": "npm run format && git add -A src"
+  },
+  "types": "lib/index.d.ts",
+  "version": "0.0.1"
+}
